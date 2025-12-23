@@ -40,6 +40,7 @@ public class Task {
         return priority;
     }
 
+    // Mark task as completed
     public void markAsCompleted() {
         this.isCompleted = true;
         System.out.println("Task ID: " + id + " marked as completed."); // Log completion functionality
@@ -56,6 +57,7 @@ public class Task {
         }
     }
 
+    // Overrides toString function
     @Override
     public String toString() {
         return "Task ID: " + id +

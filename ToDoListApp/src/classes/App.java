@@ -20,6 +20,7 @@ public class App {
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
 
+            // Functions
             switch (choice) {
                 case 1:
                     addNewTask(scanner);
@@ -35,11 +36,12 @@ public class App {
                     scanner.close();
                     return;
                 default:
-                    System.out.println("Invalid option. Please try again.");
+                    System.out.println("Invalid option! Please try again.");
             }
         }
     }
 
+    // Adds a new task
     private static void addNewTask(Scanner scanner) {
         System.out.print("Enter task description: ");
         String description = scanner.nextLine();
@@ -54,6 +56,7 @@ public class App {
         System.out.println("Task added successfully.");
     }
 
+    // Completes the task
     private static void completeTask(Scanner scanner) {
         System.out.print("Enter task ID to mark as completed: ");
         int taskId = scanner.nextInt();
