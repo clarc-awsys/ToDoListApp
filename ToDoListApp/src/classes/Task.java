@@ -8,16 +8,15 @@ public class Task {
     private static int idCounter = 1;
     private int id;
     private String description;
-    private LocalDate deadline; // **Changed to LocalDate for better date handling**
+    private LocalDate deadlineDate;
     private boolean isCompleted;
-    private String priority; // New attribute for task priority
-    
+    private String priority;
 
     public Task(String description, String deadline, String priority) {
         this.id = idCounter++;
         this.description = description;
-        setDeadline(deadline);  // **Updated to call the new setDeadline method**
-        this.priority = priority; // Set priority
+        setDeadline(deadline); // ✅ fixed
+        this.priority = priority;
         this.isCompleted = false;
     }
 
@@ -30,7 +29,7 @@ public class Task {
     }
 
     public LocalDate getDeadline() {
-        return deadline;
+        return deadlineDate;
     }
 
     public boolean isCompleted() {
@@ -38,9 +37,8 @@ public class Task {
     }
 
     public String getPriority() {
-        return priority; // Getter for priority
+        return priority;
     }
-
 
     public void markAsCompleted() {
         this.isCompleted = true;
@@ -48,23 +46,22 @@ public class Task {
     }
 
     // Method to set the deadline with validation
-    public void setDeadline(String deadline) {
+    public void setDeadline(String deadlineDate) {
         try {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-            this.deadline = LocalDate.parse(deadline, formatter);
+            this.deadlineDate = LocalDate.parse(deadlineDate, formatter); // ✅ fixed
         } catch (DateTimeParseException e) {
-            System.out.println("Invalid date format. Please use 'yyyy-MM-dd'.");
-            this.deadline = null; // or set to a default date if necessary
+            System.out.println("Invalid date format! Please use 'yyyy-MM-dd'.");
+            this.deadlineDate = null; // ✅ fixed
         }
     }
-
 
     @Override
     public String toString() {
         return "Task ID: " + id +
                ", Description: " + description +
-               ", Deadline: " + deadline +
-               ", Completed: " + (isCompleted ? "Yes" : "No")+
-               ", Priority: " + priority; // Include priority in toString;
+               ", Deadline: " + deadlineDate +
+               ", Completed: " + (isCompleted ? "Yes" : "No") +
+               ", Priority: " + priority;
     }
 }
