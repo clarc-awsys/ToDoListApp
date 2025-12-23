@@ -57,6 +57,7 @@ public class Task {
         }
     }
 
+    // Overrides toString function
     @Override
     public String toString() {
         return "Task ID: " + id +
