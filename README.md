@@ -1,106 +1,103 @@
-#📝 Java To-Do List Console Application
+# 📝 Java To-Do List Console Application
 
-A simple Java console-based To-Do List application that allows users to create tasks, view tasks, and mark tasks as completed.
-This project demonstrates object-oriented programming (OOP) concepts such as encapsulation, class interaction, and basic input validation.
+A simple Java console-based To-Do List application that allows users to
+create tasks, view tasks, and mark tasks as completed.\
+This project demonstrates basic Object-Oriented Programming (OOP)
+concepts and date validation using Java.
 
-📌 Features
+------------------------------------------------------------------------
 
-Add new tasks with:
+## 📌 Features
 
-Description
+-   Add new tasks with description, deadline, and priority
+-   View all tasks
+-   Mark tasks as completed using task ID
+-   Automatic task ID generation
+-   Deadline validation using `LocalDate`
 
-Deadline (YYYY-MM-DD)
+------------------------------------------------------------------------
 
-Priority (Low, Medium, High)
+## 🧠 Concepts Used
 
-View all tasks
+-   Java Classes and Objects
+-   Encapsulation (Getters and Setters)
+-   ArrayList
+-   LocalDate and DateTimeFormatter
+-   Exception Handling
+-   Scanner for user input
 
-Mark tasks as completed using a unique task ID
+------------------------------------------------------------------------
 
-Automatic task ID generation
+## 📂 Project Structure
 
-Deadline validation using LocalDate
+    classes/
+    ├── App.java
+    ├── Task.java
+    └── TaskManager.java
 
-🧠 Concepts Used
+------------------------------------------------------------------------
 
-Java Classes and Objects
+## ▶️ How to Run
 
-Encapsulation (getters, setters)
+1.  Compile the project:
 
-ArrayList for task storage
+```{=html}
+<!-- -->
+```
+    javac classes/*.java
 
-LocalDate and DateTimeFormatter
+2.  Run the application:
 
-Exception handling (DateTimeParseException)
+```{=html}
+<!-- -->
+```
+    java classes.App
 
-Console input using Scanner
+------------------------------------------------------------------------
 
-📂 Project Structure
-classes/
-│
-├── App.java          # Main application (entry point)
-├── Task.java         # Task model class
-└── TaskManager.java  # Manages task operations
+## 📋 Usage
 
-▶️ How to Run
+When the program starts, choose from the following options:
 
-Compile the project
+    1. Add a new task
+    2. View all tasks
+    3. Mark a task as completed
+    4. Exit
 
-javac classes/*.java
+### Add Task
 
+-   Enter task description
+-   Enter deadline in `YYYY-MM-DD` format
+-   Enter priority (`Low`, `Medium`, `High`)
 
-Run the application
+### Mark Task as Completed
 
-java classes.App
+-   Enter the task ID
 
-📋 Usage Instructions
+------------------------------------------------------------------------
 
-When the program runs, you will see the following menu:
+## ⚠️ Input Validation
 
-1. Add a new task
-2. View all tasks
-3. Mark a task as completed
-4. Exit
+-   Deadline must be in `YYYY-MM-DD` format
+-   Invalid dates are handled gracefully
 
-➕ Add a Task
+------------------------------------------------------------------------
 
-Enter a description
+## 📌 Sample Output
 
-Enter a deadline in YYYY-MM-DD format
+    Task ID: 1, Description: Finish assignment, Deadline: 2025-12-31, Completed: No, Priority: High
 
-Enter a priority (Low, Medium, High)
+------------------------------------------------------------------------
 
-👀 View Tasks
+## 🚀 Future Improvements
 
-Displays all tasks with ID, description, deadline, completion status, and priority
+-   File saving/loading
+-   Task deletion
+-   Sorting tasks by priority or deadline
+-   Better input validation
 
-✅ Mark Task as Completed
+------------------------------------------------------------------------
 
-Enter the task ID to mark it as completed
-
-⚠️ Input Validation
-
-Deadline must follow the format:
-YYYY-MM-DD
-
-If the date format is invalid, the deadline is set to null and a warning is shown.
-
-📌 Example Output
-Task ID: 1, Description: Finish Java project, Deadline: 2025-12-30, Completed: No, Priority: High
-
-🚀 Possible Improvements
-
-Save tasks to a file (persistence)
-
-Add task deletion
-
-Sort tasks by deadline or priority
-
-Prevent duplicate task descriptions
-
-Add input validation for priority values
-
-👨‍💻 Author
+## 👨‍💻 Author
 
 Clarc Jae Magbujos
-Java Practice Project – Console Application
