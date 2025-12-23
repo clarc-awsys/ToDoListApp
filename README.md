@@ -100,6 +100,6 @@ When the program starts, choose from the following options:
 
 ## 👨‍💻 Author
 
-Clarc Jae Magbujos
-Youssef Cabañero
-Kenneth Ligutom
+- Clarc Jae Magbujos
+- Youssef Cabañero
+ -Kenneth Ligutom
