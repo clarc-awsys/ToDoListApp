@@ -15,7 +15,7 @@ public class App {
             System.out.println("2. View all tasks");
             System.out.println("3. Mark a task as completed");
             System.out.println("4. Exit");
-            System.out.print("Choose an option: ");
+            System.out.print("Choose an option (1-4): ");
             
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
