@@ -40,6 +40,7 @@ public class Task {
         return priority;
     }
 
+    // Mark task as completed
     public void markAsCompleted() {
         this.isCompleted = true;
         System.out.println("Task ID " + id + " marked as completed.");
