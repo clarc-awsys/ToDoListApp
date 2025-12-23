@@ -102,4 +102,4 @@ When the program starts, choose from the following options:
 
 - Clarc Jae Magbujos
 - Youssef Cabañero
- -Kenneth Ligutom
+- Kenneth Ligutom
